@@ -21,17 +21,14 @@ class Restaurant:
     def set_number_served(self, customers):
         ''' Method to change how many customers have been served. '''
         self.served = customers
-    
 
+class IceCreamStand(Restaurant):
 
-jp_restaurant = Restaurant("Sakura", "Japanese")
+    def __init__(self, name, type):
+        super().__init__(name, type)
+        self.flavors = ["Strawberry", "Chocolat", "Vanilla"]
 
-jp_restaurant.describe_restaurant()
-jp_restaurant.open_restaurant()
+    def decribe_flavor(self):
+        for flavor in self.flavors:
+            print(f"We have {flavor} flavor!")
 
-print("\n --- \n")
-
-jp_restaurant.customers_served()
-
-jp_restaurant.set_number_served(20)
-jp_restaurant.customers_served()

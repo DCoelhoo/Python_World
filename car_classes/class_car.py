@@ -1,3 +1,5 @@
+'''A Class that can be used to represent a car.'''
+
 class Car:
     ''' A simple way to represent a car. '''
 
@@ -12,7 +14,7 @@ class Car:
         ''' Return a neatly formatted descriptive name. '''
         long_name = f"{self.year} {self.make} {self.model}"
 
-        return long_name
+        return long_name.title()
     
     def update_odometer(self, mileage):
         ''' 
@@ -32,21 +34,6 @@ class Car:
     def read_odometer(self):
         ''' Print a statement showing the car's mileage. '''
         print(f"This car has {self.odometer_reading} miles on it.")
-    
 
-my_new_car = Car("audi", "a4", 2024)
-print(my_new_car.get_descriptive_name())
-my_new_car.update_odometer(50)
-my_new_car.read_odometer()
-my_new_car.update_odometer(15)
-
-print("\n ------------- \n")
-
-my_used_car = Car("Subaru", "Outback", 2019)
-print(my_used_car.get_descriptive_name())
-
-my_used_car.update_odometer(23_500)
-my_used_car.read_odometer()
-
-my_used_car.increment_odometer(100)
-my_used_car.read_odometer()
+    def fill_gas_tank(self):
+        print("The gas tank is full!")

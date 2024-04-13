@@ -26,6 +26,7 @@ class User:
         '''Reset the login attempts to 0. '''
         self.login_attempts = 0
 
+
 user = User("Diogo", "Gonçalves", "dgoncalves", "1234")
 user2 = User("Miguel", "Antunes", "mantunes", "5678")
 
@@ -47,3 +48,8 @@ print("\n --------- \n")
 user.reset_login_attempts()
 
 user.describe_user()
+
+print("\n --------- \n")
+
+
+
